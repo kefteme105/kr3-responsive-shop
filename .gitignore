@@ -1,0 +1,21 @@
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Настройки редактора
+.vscode/
+
+# Логи
+*.log
+
+# Временные файлы
+*.tmp
+*.temp
+
+# Переменные окружения
+.env
+.env.*
+
+# Тестовые артефакты
+playwright-report/
+test-results/

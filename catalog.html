@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог учебных товаров ShopProject с краткими описаниями и ценами.">
+    <meta property="og:title" content="Каталог — ShopProject">
+    <meta property="og:description" content="Подборка товаров учебного интернет-магазина ShopProject.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kefteme105.github.io/kr3-responsive-shop/catalog.html">
+    <title>Каталог товаров — ShopProject</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+  </head>
+  <body id="top">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html" aria-label="ShopProject — главная страница">
+        Shop<span class="site-header__accent">Project</span>
+        </a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="product.html">Товары</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Заявка</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#popular">Популярные</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li aria-current="page" class="breadcrumbs__item">Каталог</li>
+        </ol>
+      </nav>
+      <section class="inner-hero" aria-labelledby="catalog-title">
+        <p class="section__eyebrow">Учебная витрина</p>
+        <h1 id="catalog-title" class="inner-hero__title">Каталог товаров</h1>
+        <p class="inner-hero__text">Три демонстрационные карточки для отработки семантической разметки и единого оформления страниц.</p>
+      </section>
+      <div class="section catalog-layout">
+        <aside class="catalog-filters" aria-labelledby="filters-title">
+          <p class="section__eyebrow">Параметры</p>
+          <h2 id="filters-title" class="catalog-filters__title">Фильтры</h2>
+          <form class="filter-form" action="catalog.html" method="get">
+            <p class="filter-form__note">Макет фильтров: подбор товаров появится на этапе JavaScript.</p>
+            <fieldset class="filter-form__group">
+              <legend class="filter-form__legend">Категория</legend>
+              <label class="filter-form__label">
+                <input type="checkbox" name="category" value="work"> Для работы</label>
+              <label class="filter-form__label">
+                <input type="checkbox" name="category" value="popular"> Популярное</label>
+              <label class="filter-form__label">
+                <input type="checkbox" name="category" value="new"> Новинки</label>
+            </fieldset>
+            <div class="filter-form__prices">
+              <div class="order-form__field order-form__field--price">
+                <label for="price-from" class="order-form__label">Цена от</label>
+                <input id="price-from" name="price-from" type="number" min="0" step="100" placeholder="0" class="order-form__input">
+              </div>
+              <div class="order-form__field order-form__field--price">
+                <label for="price-to" class="order-form__label">Цена до</label>
+                <input id="price-to" name="price-to" type="number" min="0" step="100" placeholder="3000" class="order-form__input">
+              </div>
+            </div>
+            <button class="button" type="submit" disabled>Применить</button>
+            <a class="button button--secondary" href="catalog.html">Сбросить</a>
+          </form>
+        </aside>
+        <section class="catalog-products" aria-labelledby="products-title">
+          <div class="section__heading">
+            <p class="section__eyebrow">Все позиции</p>
+            <h2 id="products-title" class="section__title">Товары каталога</h2>
+            <p class="section__description">Найдено товаров: 3</p>
+          </div>
+          <div class="products-grid products-grid--catalog">
+            <article class="product-card">
+              <span class="product-card__badge">Хит</span>
+              <img class="product-card__image" src="images/product-1-640.webp" srcset="images/product-1-320.webp 320w, images/product-1-640.webp 640w, images/product-1-960.webp 960w" sizes="(min-width: 1200px) 370px, (min-width: 1024px) calc(50vw - 212px), (min-width: 768px) calc(50vw - 80px), calc(100vw - 85px)" width="640" height="400" loading="lazy" alt="Учебный товар 1: набор блокнотов">
+              <p class="product-card__tag">Для работы</p>
+              <h2 class="product-card__title">
+                <a href="product.html#product-1" class="product-card__link">Товар 1</a>
+              </h2>
+              <p class="product-card__description">Практичное решение для ежедневных учебных задач.</p>
+              <p class="product-card__price">1 000 ₽</p>
+              <a class="button product-card__button" href="product.html#product-1">Узнать подробнее</a>
+            </article>
+            <article class="product-card">
+              <span class="product-card__badge">Хит</span>
+              <img class="product-card__image" src="images/product-2-640.webp" srcset="images/product-2-320.webp 320w, images/product-2-640.webp 640w, images/product-2-960.webp 960w" sizes="(min-width: 1200px) 370px, (min-width: 1024px) calc(50vw - 212px), (min-width: 768px) calc(50vw - 80px), calc(100vw - 85px)" width="640" height="400" loading="lazy" alt="Учебный товар 2: набор блокнотов">
+              <p class="product-card__tag">Популярное</p>
+              <h2 class="product-card__title">
+                <a href="product.html#product-2" class="product-card__link">Товар 2</a>
+              </h2>
+              <p class="product-card__description">Универсальный вариант с расширенной комплектацией.</p>
+              <p class="product-card__price">1 500 ₽</p>
+              <a class="button product-card__button" href="product.html#product-2">Узнать подробнее</a>
+            </article>
+            <article class="product-card">
+              <span class="product-card__badge">Новинка</span>
+              <img class="product-card__image" src="images/product-3-640.webp" srcset="images/product-3-320.webp 320w, images/product-3-640.webp 640w, images/product-3-960.webp 960w" sizes="(min-width: 1200px) 370px, (min-width: 1024px) calc(50vw - 212px), (min-width: 768px) calc(50vw - 80px), calc(100vw - 85px)" width="640" height="400" loading="lazy" alt="Учебный товар 3: набор блокнотов">
+              <p class="product-card__tag">Новинка</p>
+              <h2 class="product-card__title">
+                <a href="product.html#product-3" class="product-card__link">Товар 3</a>
+              </h2>
+              <p class="product-card__description">Учебный товар для демонстрации карточки каталога.</p>
+              <p class="product-card__price">2 000 ₽</p>
+              <a class="button product-card__button" href="product.html#product-3">Узнать подробнее</a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__text">
+          <strong class="site-footer__brand">ShopProject</strong>
+        </p>
+        <p class="site-footer__text">© 2026 Учебный проект. Все права защищены.</p>
+        <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+      </div>
+    </footer>
+    <a class="back-to-top" href="#top" aria-label="Вернуться наверх">↑ Наверх</a>
+  </body>
+</html>
