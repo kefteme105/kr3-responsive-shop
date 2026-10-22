@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Учебный интернет-магазин — практические работы по фронтенд- и бэкенд-разработке.">
+    <meta property="og:title" content="ShopProject — учебный интернет-магазин">
+    <meta property="og:description" content="Каталог учебных товаров и демонстрация современной HTML/CSS-вёрстки.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kefteme105.github.io/kr3-responsive-shop/">
+    <title>Учебный интернет-магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/responsive.css">
+  </head>
+  <body id="top">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html" aria-label="ShopProject — главная страница">
+        Shop<span class="site-header__accent">Project</span>
+        </a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="product.html">Товары</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Заявка</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#popular">Популярные</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__layout">
+          <div>
+            <p class="hero__eyebrow">Учебный проект 2026</p>
+            <h1 id="hero-title" class="hero__title">Учебный интернет-магазин</h1>
+            <p class="hero__text">
+        Учебный многостраничный магазин: изучите каталог, характеристики товаров
+        и заполните демонстрационную заявку.
+      </p>
+            <a class="button" href="#popular">Перейти к товарам</a>
+          </div>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="images/hero-desktop.webp">
+              <source media="(min-width: 768px)" srcset="images/hero-tablet.webp">
+                <img class="hero__image" src="images/hero-mobile.webp" width="640" height="400" alt="Блокнот и ручка для учёбы" fetchpriority="high">
+              </source>
+            </source>
+          </picture>
+        </div>
+      </section>
+      <section class="section" id="advantages" aria-labelledby="advantages-title">
+        <div class="section__heading">
+          <p class="section__eyebrow">Почему этот проект удобен</p>
+          <h2 id="advantages-title" class="section__title">Преимущества проекта</h2>
+        </div>
+        <ul class="advantages-list">
+          <li class="advantages-list__item">
+            <strong class="advantages-list__title">Понятная структура</strong>
+            <span class="advantages-list__text">Логичное разделение страницы на смысловые HTML-блоки.</span>
+          </li>
+          <li class="advantages-list__item">
+            <strong class="advantages-list__title">Семантическая разметка</strong>
+            <span class="advantages-list__text">Элементы header, nav, main, section, article, aside и footer.</span>
+          </li>
+          <li class="advantages-list__item">
+            <strong class="advantages-list__title">Внешний CSS-файл</strong>
+            <span class="advantages-list__text">Стили хранятся отдельно и легко поддерживаются.</span>
+          </li>
+          <li class="advantages-list__item">
+            <strong class="advantages-list__title">Готовность к развитию</strong>
+            <span class="advantages-list__text">Основа для будущего многостраничного сайта.</span>
+          </li>
+        </ul>
+      </section>
+      <section class="section" id="popular" aria-labelledby="popular-title">
+        <div class="section__heading">
+          <p class="section__eyebrow">Подборка недели</p>
+          <h2 id="popular-title" class="section__title">Популярные товары</h2>
+          <p class="section__description">Выберите учебный товар и заполните короткую заявку.</p>
+        </div>
+        <div class="products-grid">
+          <article class="product-card">
+            <span class="product-card__badge">Хит</span>
+            <img class="product-card__image" src="images/product-1-640.webp" srcset="images/product-1-320.webp 320w, images/product-1-640.webp 640w, images/product-1-960.webp 960w" sizes="(min-width: 1200px) 315px, (min-width: 768px) calc(50vw - 80px), calc(100vw - 85px)" width="640" height="400" loading="lazy" alt="Учебный товар 1: набор блокнотов">
+            <p class="product-card__tag">Для работы</p>
+            <h3 class="product-card__title">
+              <a href="product.html#product-1" class="product-card__link">Товар 1</a>
+            </h3>
+            <p class="product-card__description">Практичное решение для ежедневных учебных задач.</p>
+            <p class="product-card__price">1 000 ₽</p>
+            <button class="button product-card__button" type="button" data-product="Товар 1">
+            Заказать
+          </button>
+          </article>
+          <article class="product-card">
+            <span class="product-card__badge">Хит</span>
+            <img class="product-card__image" src="images/product-2-640.webp" srcset="images/product-2-320.webp 320w, images/product-2-640.webp 640w, images/product-2-960.webp 960w" sizes="(min-width: 1200px) 315px, (min-width: 768px) calc(50vw - 80px), calc(100vw - 85px)" width="640" height="400" loading="lazy" alt="Учебный товар 2: набор блокнотов">
+            <p class="product-card__tag">Популярное</p>
+            <h3 class="product-card__title">
+              <a href="product.html#product-2" class="product-card__link">Товар 2</a>
+            </h3>
+            <p class="product-card__description">Универсальный вариант с расширенной комплектацией.</p>
+            <p class="product-card__price">1 500 ₽</p>
+            <button class="button product-card__button" type="button" data-product="Товар 2">
+            Заказать
+          </button>
+          </article>
+          <article class="product-card">
+            <span class="product-card__badge">Новинка</span>
+            <img class="product-card__image" src="images/product-3-640.webp" srcset="images/product-3-320.webp 320w, images/product-3-640.webp 640w, images/product-3-960.webp 960w" sizes="(min-width: 1200px) 315px, (min-width: 768px) calc(50vw - 80px), calc(100vw - 85px)" width="640" height="400" loading="lazy" alt="Учебный товар 3: набор блокнотов">
+            <p class="product-card__tag">Новинка</p>
+            <h3 class="product-card__title">
+              <a href="product.html#product-3" class="product-card__link">Товар 3</a>
+            </h3>
+            <p class="product-card__description">Учебный товар для демонстрации карточки каталога.</p>
+            <p class="product-card__price">2 000 ₽</p>
+            <button class="button product-card__button" type="button" data-product="Товар 3">
+            Заказать
+          </button>
+          </article>
+        </div>
+      </section>
+      <aside class="aside-info" aria-labelledby="student-info-title">
+        <div>
+          <p class="section__eyebrow">Следующие этапы</p>
+          <h2 id="student-info-title" class="aside-info__title">Информация для студентов</h2>
+        </div>
+        <p class="aside-info__text">
+        Проект использует HTML, CSS, Flex/Grid и БЭМ. Далее предстоит расширение
+        JavaScript-интерактивности и подключение серверной части.
+      </p>
+      </aside>
+    </main>
+    <footer id="contacts" class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__text">
+          <strong class="site-footer__brand">ShopProject</strong>
+        </p>
+        <p class="site-footer__text">© 2026 Учебный проект. Все права защищены.</p>
+        <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+      </div>
+    </footer>
+    <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+      <div class="order-dialog__header">
+        <div>
+          <p class="section__eyebrow">Новая заявка</p>
+          <h2 id="order-dialog-title" class="order-dialog__title">Оформление заявки</h2>
+        </div>
+        <button class="icon-button" type="button" id="close-order-dialog" aria-label="Закрыть окно">×</button>
+      </div>
+      <form class="order-form" id="order-form" action="#" method="post" novalidate>
+        <input id="selected-product" name="selected-product" type="hidden">
+        <div class="order-form__field">
+          <label for="order-name" class="order-form__label">Имя</label>
+          <input id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required class="order-form__input">
+        </div>
+        <div class="order-form__grid">
+          <div class="order-form__field">
+            <label for="order-email" class="order-form__label">E-mail</label>
+            <input id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required class="order-form__input">
+          </div>
+          <div class="order-form__field">
+            <label for="order-phone" class="order-form__label">Телефон</label>
+            <input id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" autocomplete="tel" required class="order-form__input">
+            <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+          </div>
+        </div>
+        <div class="order-form__grid">
+          <div class="order-form__field">
+            <label for="order-date" class="order-form__label">Дата связи</label>
+            <input id="order-date" name="date" type="date" class="order-form__input">
+          </div>
+          <div class="order-form__field">
+            <label for="order-topic" class="order-form__label">Тема заявки</label>
+            <select id="order-topic" name="topic" required class="order-form__select">
+              <option value="">Выберите тему</option>
+              <option value="product">Заказ товара</option>
+              <option value="consultation">Консультация</option>
+              <option value="delivery">Доставка</option>
+            </select>
+          </div>
+        </div>
+        <div class="order-form__field">
+          <label for="order-comment" class="order-form__label">Комментарий</label>
+          <textarea id="order-comment" name="comment" rows="4" placeholder="Укажите дополнительную информацию" class="order-form__textarea"></textarea>
+        </div>
+        <div class="order-form__field order-form__field--checkbox">
+          <label class="order-form__label order-form__label--checkbox">
+            <input id="order-agreement" name="agreement" type="checkbox" required class="order-form__input order-form__input--checkbox">
+            <span>Я согласен на обработку данных</span>
+          </label>
+        </div>
+        <div class="order-form__actions">
+          <button class="button button--secondary" type="button" id="cancel-order-dialog">Закрыть</button>
+          <button class="button" type="submit">Отправить заявку</button>
+        </div>
+      </form>
+    </dialog>
+    <p class="success-message" id="success-message" role="status" hidden>Заявка проверена. Это демонстрация, данные не отправлены.</p>
+    <a class="back-to-top" href="#top" aria-label="Вернуться наверх">↑ Наверх</a>
+  </body>
+</html>

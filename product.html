@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Описание, изображения, цены и характеристики учебных товаров.">
+    <title>Товары подробно — ShopProject</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/responsive.css">
+  </head>
+  <body id="top">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html" aria-label="ShopProject — главная страница">
+        Shop<span class="site-header__accent">Project</span>
+        </a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="product.html" aria-current="page">Товары</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Заявка</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#popular">Популярные</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs__item" aria-current="page">Товары подробно</li>
+        </ol>
+      </nav>
+      <section class="inner-hero">
+        <h1 class="inner-hero__title">Товары подробно</h1>
+        <p class="inner-hero__text">Описание, изображения, цены и характеристики учебных товаров.</p>
+      </section>
+      <article class="section product-detail" id="product-1">
+        <div>
+          <img class="product-detail__image" src="images/product-1-640.webp" width="640" height="400" alt="Учебный товар 1: набор блокнотов" srcset="images/product-1-320.webp 320w, images/product-1-640.webp 640w, images/product-1-960.webp 960w" sizes="(min-width: 1200px) 428px, (min-width: 768px) calc(100vw - 63px), calc(100vw - 47px)" loading="lazy">
+          <h2 class="product-detail__title">Товар 1</h2>
+          <p>Практичное решение для ежедневных учебных задач.</p>
+          <p class="product-card__price">1 000 ₽</p>
+          <a class="button" href="order.html?product=1">Оставить заявку на товар 1</a>
+        </div>
+        <div class="table-wrapper" tabindex="0" role="region" aria-label="Характеристики товара 1">
+          <table class="product-table">
+            <caption>Характеристики товара 1</caption>
+            <thead>
+              <tr>
+                <th scope="col">Параметр</th>
+                <th scope="col">Значение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Артикул</th>
+                <td>SHOP-001</td>
+              </tr>
+              <tr>
+                <th scope="row">Категория</th>
+                <td>Учебные принадлежности</td>
+              </tr>
+              <tr>
+                <th scope="row">Комплектация</th>
+                <td>Блокнот, ручка и учебные материалы</td>
+              </tr>
+              <tr>
+                <th scope="row">Цена</th>
+                <td>1 000 ₽</td>
+              </tr>
+              <tr>
+                <th scope="row">Наличие</th>
+                <td>В наличии (демонстрация)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="section product-detail" id="product-2">
+        <div>
+          <img class="product-detail__image" src="images/product-2-640.webp" width="640" height="400" alt="Учебный товар 2: набор блокнотов" srcset="images/product-2-320.webp 320w, images/product-2-640.webp 640w, images/product-2-960.webp 960w" sizes="(min-width: 1200px) 428px, (min-width: 768px) calc(100vw - 63px), calc(100vw - 47px)" loading="lazy">
+          <h2 class="product-detail__title">Товар 2</h2>
+          <p>Универсальный вариант с расширенной комплектацией.</p>
+          <p class="product-card__price">1 500 ₽</p>
+          <a class="button" href="order.html?product=2">Оставить заявку на товар 2</a>
+        </div>
+        <div class="table-wrapper" tabindex="0" role="region" aria-label="Характеристики товара 2">
+          <table class="product-table">
+            <caption>Характеристики товара 2</caption>
+            <thead>
+              <tr>
+                <th scope="col">Параметр</th>
+                <th scope="col">Значение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Артикул</th>
+                <td>SHOP-002</td>
+              </tr>
+              <tr>
+                <th scope="row">Категория</th>
+                <td>Учебные принадлежности</td>
+              </tr>
+              <tr>
+                <th scope="row">Комплектация</th>
+                <td>Блокнот, ручка и учебные материалы</td>
+              </tr>
+              <tr>
+                <th scope="row">Цена</th>
+                <td>1 500 ₽</td>
+              </tr>
+              <tr>
+                <th scope="row">Наличие</th>
+                <td>В наличии (демонстрация)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="section product-detail" id="product-3">
+        <div>
+          <img class="product-detail__image" src="images/product-3-640.webp" width="640" height="400" alt="Учебный товар 3: набор блокнотов" srcset="images/product-3-320.webp 320w, images/product-3-640.webp 640w, images/product-3-960.webp 960w" sizes="(min-width: 1200px) 428px, (min-width: 768px) calc(100vw - 63px), calc(100vw - 47px)" loading="lazy">
+          <h2 class="product-detail__title">Товар 3</h2>
+          <p>Учебный товар для демонстрации карточки каталога.</p>
+          <p class="product-card__price">2 000 ₽</p>
+          <a class="button" href="order.html?product=3">Оставить заявку на товар 3</a>
+        </div>
+        <div class="table-wrapper" tabindex="0" role="region" aria-label="Характеристики товара 3">
+          <table class="product-table">
+            <caption>Характеристики товара 3</caption>
+            <thead>
+              <tr>
+                <th scope="col">Параметр</th>
+                <th scope="col">Значение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Артикул</th>
+                <td>SHOP-003</td>
+              </tr>
+              <tr>
+                <th scope="row">Категория</th>
+                <td>Учебные принадлежности</td>
+              </tr>
+              <tr>
+                <th scope="row">Комплектация</th>
+                <td>Блокнот, ручка и учебные материалы</td>
+              </tr>
+              <tr>
+                <th scope="row">Цена</th>
+                <td>2 000 ₽</td>
+              </tr>
+              <tr>
+                <th scope="row">Наличие</th>
+                <td>В наличии (демонстрация)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </main>
+    <footer id="contacts" class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__text">
+          <strong class="site-footer__brand">ShopProject</strong>
+        </p>
+        <p class="site-footer__text">© 2026 Учебный проект. Все права защищены.</p>
+        <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+      </div>
+    </footer>
+    <a class="back-to-top" href="#top" aria-label="Вернуться наверх">↑ Наверх</a>
+  </body>
+</html>
