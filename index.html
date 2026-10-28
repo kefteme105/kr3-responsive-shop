@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/responsive.css">
   </head>
   <body id="top">
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
     <header class="site-header">
       <div class="site-header__inner">
         <a class="site-header__logo" href="index.html" aria-label="ShopProject — главная страница">
@@ -43,7 +44,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main id="main" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__layout">
           <div>
@@ -57,10 +58,8 @@
           </div>
           <picture>
             <source media="(min-width: 1200px)" srcset="images/hero-desktop.webp">
-              <source media="(min-width: 768px)" srcset="images/hero-tablet.webp">
-                <img class="hero__image" src="images/hero-mobile.webp" width="640" height="400" alt="Блокнот и ручка для учёбы" fetchpriority="high">
-              </source>
-            </source>
+            <source media="(min-width: 768px)" srcset="images/hero-tablet.webp">
+            <img class="hero__image" src="images/hero-mobile.webp" width="640" height="400" alt="Блокнот и ручка для учёбы" fetchpriority="high">
           </picture>
         </div>
       </section>
@@ -104,7 +103,7 @@
             </h3>
             <p class="product-card__description">Практичное решение для ежедневных учебных задач.</p>
             <p class="product-card__price">1 000 ₽</p>
-            <button class="button product-card__button" type="button" data-product="Товар 1">
+            <button class="button product-card__button" type="button" data-product="Товар 1" aria-label="Заказать товар 1">
             Заказать
           </button>
           </article>
@@ -117,7 +116,7 @@
             </h3>
             <p class="product-card__description">Универсальный вариант с расширенной комплектацией.</p>
             <p class="product-card__price">1 500 ₽</p>
-            <button class="button product-card__button" type="button" data-product="Товар 2">
+            <button class="button product-card__button" type="button" data-product="Товар 2" aria-label="Заказать товар 2">
             Заказать
           </button>
           </article>
@@ -130,7 +129,7 @@
             </h3>
             <p class="product-card__description">Учебный товар для демонстрации карточки каталога.</p>
             <p class="product-card__price">2 000 ₽</p>
-            <button class="button product-card__button" type="button" data-product="Товар 3">
+            <button class="button product-card__button" type="button" data-product="Товар 3" aria-label="Заказать товар 3">
             Заказать
           </button>
           </article>
@@ -177,8 +176,8 @@
           </div>
           <div class="order-form__field">
             <label for="order-phone" class="order-form__label">Телефон</label>
-            <input id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" autocomplete="tel" required class="order-form__input">
-            <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+            <input id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" autocomplete="tel" required class="order-form__input" aria-describedby="order-phone-hint">
+            <small class="order-form__hint" id="order-phone-hint">Формат: +7 (900) 000-00-00</small>
           </div>
         </div>
         <div class="order-form__grid">
