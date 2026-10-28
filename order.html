@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/responsive.css">
   </head>
   <body id="top">
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
     <header class="site-header">
       <div class="site-header__inner">
         <a class="site-header__logo" href="index.html" aria-label="ShopProject — главная страница">
@@ -39,7 +40,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main id="main" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <ol class="breadcrumbs__list">
           <li class="breadcrumbs__item">
@@ -75,8 +76,8 @@
             </div>
             <div class="order-form__field">
               <label for="page-order-phone" class="order-form__label">Телефон</label>
-              <input id="page-order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" autocomplete="tel" required class="order-form__input">
-              <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+              <input id="page-order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" autocomplete="tel" required class="order-form__input" aria-describedby="page-order-phone-hint">
+              <small class="order-form__hint" id="page-order-phone-hint">Формат: +7 (900) 000-00-00</small>
             </div>
           </div>
           <div class="order-form__grid">

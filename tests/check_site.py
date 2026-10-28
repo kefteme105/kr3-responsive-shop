@@ -10,6 +10,7 @@ class Page(HTMLParser):
         super().__init__()
         self.path, self.ids, self.refs, self.labels = path, [], [], []
         self.inputs, self.h1, self.titles, self.viewport = [], 0, 0, False
+        self.main_count, self.skip_links, self.descriptions = 0, 0, []
         self.feed(path.read_text(encoding='utf-8'))
 
     def handle_starttag(self, tag, attrs):
@@ -24,6 +25,14 @@ class Page(HTMLParser):
                 self.refs.append(item.strip().split()[0])
         if tag == 'label' and 'for' in attrs:
             self.labels.append(attrs['for'])
+        if tag == 'main':
+            self.main_count += 1
+            assert attrs.get('id') == 'main', f'{self.path.name}: у main нет id="main"'
+        if tag == 'a' and attrs.get('class') == 'skip-link':
+            self.skip_links += 1
+            assert attrs.get('href') == '#main', f'{self.path.name}: неверная ссылка пропуска'
+        if 'aria-describedby' in attrs:
+            self.descriptions.extend(attrs['aria-describedby'].split())
         if tag == 'h1': self.h1 += 1
         if tag == 'title': self.titles += 1
         if tag == 'meta' and attrs.get('name') == 'viewport':
@@ -35,8 +44,10 @@ pages = {p.name: Page(p) for p in ROOT.glob('*.html')}
 links = 0
 for name, page in pages.items():
     assert page.h1 == 1 and page.titles == 1 and page.viewport, f'{name}: h1/title/viewport'
+    assert page.main_count == 1 and page.skip_links == 1, f'{name}: main/skip-link'
     assert len(page.ids) == len(set(page.ids)), f'{name}: повтор id'
     assert all(label in page.ids for label in page.labels), f'{name}: неверный label/for'
+    assert all(item in page.ids for item in page.descriptions), f'{name}: неверный aria-describedby'
     for ref in page.refs:
         url = urlsplit(ref)
         if url.scheme or url.netloc:
